@@ -120,6 +120,17 @@ function App() {
               </div>
             </div>
 
+            {/* Creator Footer - Ninja Style */}
+            <div className="absolute bottom-6 left-0 w-full text-center z-20 pointer-events-none animate-in fade-in duration-1000 delay-1000">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-black/60 backdrop-blur-md rounded-full border border-white/10 shadow-2xl">
+                <span className="text-gray-400 text-xs font-bold tracking-[0.2em] uppercase">Forged by</span>
+                <span className="text-white font-black tracking-widest text-sm bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-500 drop-shadow-sm font-sans italic">
+                  SANJOKER
+                </span>
+                <span className="text-red-500 animate-spin-slow">✴️</span>
+              </div>
+            </div>
+
           </div>
         </div>
       )}
