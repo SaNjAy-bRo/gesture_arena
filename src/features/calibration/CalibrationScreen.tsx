@@ -5,7 +5,7 @@ import { CalibrationStore } from "../../engine/CalibrationStore";
 
 export const CalibrationScreen = ({ onBack }: { onBack: () => void }) => {
     const [step, setStep] = useState<"INTRO" | "HAND_CHECK" | "SENSITIVITY" | "DONE">("INTRO");
-    const { gesture, landmarks, confidence } = useGesture();
+    const { landmarks } = useGesture();
     const [calibrationData, setCalibrationData] = useState(CalibrationStore.get());
 
     // Auto-advance hand check
@@ -51,7 +51,7 @@ export const CalibrationScreen = ({ onBack }: { onBack: () => void }) => {
                     <div className="w-full lg:w-1/2 p-10 md:p-14 flex flex-col justify-center relative">
                         {/* Stepper Dots */}
                         <div className="flex items-center gap-2 absolute top-10 left-10 md:left-14">
-                            {["INTRO", "HAND_CHECK", "SENSITIVITY", "DONE"].map((s, i) => (
+                            {["INTRO", "HAND_CHECK", "SENSITIVITY", "DONE"].map((s) => (
                                 <div key={s} className={`h-2 rounded-full transition-all duration-500 ${step === s ? "w-8 bg-orange-500" : "w-2 bg-white/20"}`} />
                             ))}
                         </div>
